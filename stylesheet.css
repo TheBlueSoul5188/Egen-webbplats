@@ -1,0 +1,44 @@
+* {
+    background-color: dimgray;
+}
+
+body {
+    display: grid;
+}
+
+/*Gör en rubrik för alla sidor. Gör en underline och centrerar texten.*/
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+
+
+
+/*Decoration och style på Home, Intressen och utbildning*/
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+    text-indent: 415px;
+    font: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*Gör en hover på Home, Intressen och Utbldning för att gör det mer intressant*/ 
+.navbar a:hover {
+    background-color: grey;
+}
+
+.ideologi {
+    width: 30%;
+    border: 2px solid black;
+    float: left;
+    text-align: left;
+    padding: 10px 20px;
+}
