@@ -1,9 +1,34 @@
-* {
-    background-color: dimgray;
-}
 
 body {
     display: grid;
+    background-color: dimgray;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+    "header header"
+    "nav nav "
+    "main aside"
+    "footer footer"
+}
+
+/*nämner alla grids*/
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    padding-left: 15px;
+    grid-area: main;
 }
 
 /*Gör en rubrik för alla sidor. Gör en underline och centrerar texten.*/
@@ -14,31 +39,43 @@ h1 {
     text-decoration: underline;
 }
 
-
-
-/*Decoration och style på Home, Intressen och utbildning*/
-.navbar a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: underline;
-    text-indent: 415px;
-    font: 20px;
-    position: relative;
-    top: 0;
-    left: 0;
+/* Hur navigationen ska se ut och vart dem kommer att ligga med hjälp av grid-area*/
+nav {
+    grid-area: nav;
+    width: 100%;
+    background-color: lightgrey;
+    overflow: auto;
 }
 
-/*Gör en hover på Home, Intressen och Utbldning för att gör det mer intressant*/ 
-.navbar a:hover {
-    background-color: grey;
+/* Ändrar på texten i navigations menyn och hur texten ska se ut.*/
+nav a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/* Gör en hover över dem olika länkarna för att göra det lite mer intressant*/
+nav a:hover {
+    background-color: black;
+    color: white;
 }
 
 .ideologi {
-    width: 30%;
-    border: 2px solid black;
+    width: 70%;
     float: left;
-    text-align: left;
-    padding: 10px 20px;
+    text-align: center;
+    padding: 10px 60px;
+}
+
+.intro {
+    padding-left: 15px;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 30px;
 }
