@@ -31,6 +31,10 @@ main {
     grid-area: main;
 }
 
+main p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /*Gör en rubrik för alla sidor. Gör en underline och centrerar texten.*/
 h1 {
     text-align: center;
@@ -78,4 +82,45 @@ ul {
     list-style-type: square;
     list-style-position: inside;
     padding-left: 30px;
+}
+
+.int-page {
+    border: 2px solid black;
+    width: 70%;
+}
+
+h1, h2, h3, h4 {
+    text-decoration: underline;s 
+}
+
+table {
+    font-family: arial;
+    border-collapse: collapse;
+    width: 25%;
+    border: 2px solid black;
+}
+
+aside p {
+    font-size: 20px; 
+    font-family: arial; 
+    font-weight: bold;
+}
+
+tr:nth-child(2) {
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(1) {
+    background-color: white;
+    color: black;
+}
+
+tr:nth-child(3) {
+    background-color: white;
+    color: black;
+}
+
+.höns {
+    width: 67%;
 }
