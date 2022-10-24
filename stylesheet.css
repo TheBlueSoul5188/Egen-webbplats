@@ -1,4 +1,4 @@
-
+/*Beskriver hur sidan ska se ut och vilken display det ska vara. Här bestäms hur gridlayout ska se ut.*/
 body {
     display: grid;
     background-color: dimgray;
@@ -12,7 +12,7 @@ body {
     "footer footer"
 }
 
-/*nämner alla grids*/
+/*nämner alla grids för att kunna placera dem med hjälp av gird-template-areas.*/
 header {
     grid-area: header;
 }
@@ -35,7 +35,13 @@ main p {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/*Gör en rubrik för alla sidor. Gör en underline och centrerar texten.*/
+/*Style på länkarna i main a så att den blå färgen och underline försvinner.*/
+main a {
+    text-decoration: none;
+    color: white
+}
+
+/*Gör en rubrik för alla sidor. Gör en underline och centrerar texten. Förstorar texten. */
 h1 {
     text-align: center;
     font-size: xx-large;
@@ -43,7 +49,7 @@ h1 {
     text-decoration: underline;
 }
 
-/* Hur navigationen ska se ut och vart dem kommer att ligga med hjälp av grid-area*/
+/* Hur navigationen ska se ut och vart dem kommer att ligga med hjälp av grid-area. backgrundsfärg som blir ljusgrå. width 100% gör att den tar upp hela sidan.*/
 nav {
     grid-area: nav;
     width: 100%;
@@ -51,22 +57,23 @@ nav {
     overflow: auto;
 }
 
-/* Ändrar på texten i navigations menyn och hur texten ska se ut.*/
+/* Ändrar på texten i navigations menyn och hur texten ska se ut. Gör en float för att elementet ska placeras åt vänster om container. centrerar texten. Det blir en ruta runt om texten som är 12px. färg på text svart. Storlek är 17px och det är ingen dekoration på texten.*/
 nav a {
-    float: left;
     text-align: center;
+    float: left;
     padding: 12px;
     color: black;
     font-size: 17px;
     text-decoration: none;
 }
 
-/* Gör en hover över dem olika länkarna för att göra det lite mer intressant*/
+/*Hover. drar över så blir texten vitt och bakgrunden blir svart.*/
 nav a:hover {
     background-color: black;
     color: white;
 }
 
+/*Använder en class på main för att inte blanda ihop dem andra main på de andra sidorna. Texten i mitten och storlek på den. Gör en float för att elementet ska placeras åt vänster om container. Centrerar texten och gör en ruta runt den med padding 10px 16px */
 .ideologi {
     width: 70%;
     float: left;
@@ -74,25 +81,31 @@ nav a:hover {
     padding: 10px 60px;
 }
 
+/*För listan med mina intressen. Vänster padding med 15px.*/
 .intro {
     padding-left: 15px;
 }
 
+/*Gör så att punkterna blir fyrkanter istället. Padding vänster 30px för att få avstånd.*/
 ul {
     list-style-type: square;
     list-style-position: inside;
     padding-left: 30px;
 }
 
+/*en border som är 2px tjock och solid och som är svart. Den tar upp 70%.*/
 .int-page {
     border: 2px solid black;
     width: 70%;
 }
 
+/*Alla rubriker på sidan ska ha en linje under texten och ska ha en snead text.*/
 h1, h2, h3, h4 {
-    text-decoration: underline;s 
+    text-decoration: underline;
+    font-style: italic;
 }
 
+/*gör stilen till arial. Gör så att linjer tas bort med hjälp av collapse. tar upp 25%. En border på 2px tjock som är solid och har färgen svart. */
 table {
     font-family: arial;
     border-collapse: collapse;
@@ -100,12 +113,14 @@ table {
     border: 2px solid black;
 }
 
+/*Texten storlek på 20px. stil = arial. Och texten är ifylld som får en tjockare text.*/
 aside p {
     font-size: 20px; 
     font-family: arial; 
     font-weight: bold;
 }
 
+/*3 stycken. Som hjälper med tabellen som gör en zebrastipning med hjälp av psuedoklasselektor. bakgrunden är blå på 2 och vitt på 1 och 3. På 2:an så är texten vit och på 1, 3 så är texten svart. */
 tr:nth-child(2) {
     background-color: blue;
     color: white;
@@ -121,6 +136,7 @@ tr:nth-child(3) {
     color: black;
 }
 
+/*Placerar bilden med hjälp av 67% width.*/
 .höns {
     width: 67%;
 }
